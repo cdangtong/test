@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>汽车秀</title>
+	<link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+<div class="content">
+	<div class="nav-tab-content">
+		<div class="show-home-slide active">
+			<div class="scroll-content">
+				<div class="scroll">
+					<form method="post" action="ajaxDone.html" onsubmit="return validateCallback(this, navViewAjaxDone)">
+						<div class="list">
+							<div class="item">
+								<div class="item-content">
+									<label class="name">推荐给谁:</label>
+									<input class="input" type="number" name="mibile" maxlength="11" pattern="[0-9]{11,11}" placeholder="请填写您好友的姓名" required="required" data-error="请输入您的11位手机号码">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">联系方式:</label>
+									<input class="input" type="number" name="mibile" maxlength="11" pattern="[0-9]{11,11}" placeholder="请输入您的11位手机号码" required="required" data-error="请输入您的11位手机号码">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">推荐车型:</label>
+									<input class="input" type="text" name="comeTime">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">所在地址:</label>
+									<select class="select" name="dealer">
+										<option></option>
+										<option>北京</option>
+										<option>上海</option>
+										<option>天津</option>
+										<option>河北</option>
+										<option>河南</option>
+									</select>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">购车推荐:</label>
+									<input class="input" type="text" name="buyTime" required placeholder="李小二">
+								</div>
+							</div>
+						</div>
+						<div class="form-button">
+							<button class="form-submit btn-orange" type="submit">确 定</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

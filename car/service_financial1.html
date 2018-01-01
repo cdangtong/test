@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>汽车秀</title>
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body class="android">
+
+
+<div class="view-container top-tab">
+    <!-- 内容 begin -->
+    <div class="Top-location">
+        <div class="nav-tabbar nav-tabbar-tab " style="position:relative">
+            <a class="tab-button" href="service_financial.html">产品介绍</a>
+            <a class="tab-button active" href="service_financial1.html">保险计算器</a>
+        </div>
+    </div>
+    <!-- 内容 End -->
+    <div class="scroll-content dwz-scroll" style="overflow:auto">
+        <div class="scroll">
+            <!-- 内容 begin-->
+            <div class="jinrong">
+                <div class="select">
+                    <select name="vehicle" dwz-event-on-change="change">
+                        <option value="">车型：</option><option value="30">大众汽车</option><option value="5">大众汽车</option><option value="6">大众汽车</option><option value="7">大众汽车</option><option value="8">大众汽车</option><option value="9">大众汽车</option><option value="10">大众汽车</option><option value="11">大众汽车</option><option value="12">大众汽车</option>
+
+                    </select>
+                    <select name="model" dwz-event-on-change="change" style="margin-bottom: 0">
+                        <option value="">型号：</option>
+                        <option value="">帕萨特</option>
+                        <option value="">宝来</option>
+                        <option value="">捷达</option>
+                        <option value="">新宝来</option>
+                        <option value="">帕萨特</option>
+                    </select>
+                </div>
+                <p class="xh " style="margin:0; padding:0;"><span>您选择的车型报价为：</span><em>¥<i id="service_financal_baojia">16.28</i>万</em></p>
+                <!--分割条-->
+                <div class="devider t-line"></div>
+                <h4 style="height:30px; font-weight:normal" class="t-line">贷款方式</h4>
+                <ul class="list" id="" style="display: block;padding-top:0; border:none;">
+                    <li ><span data-val="0.5" class="back5"></span>信用卡产品</li>
+                    <li ><span data-val="0.5" class="back5"></span>平安银行产品</li>
+                    <li ><span data-val="0.7" class=""></span>招商银行产品</li>
+                    <li><span data-val="0.7" class=""></span>建设银行产品</li>
+                </ul>
+                <ul class="list1" id="service_financal_listBox2" style="display: none;">
+                    <li ><span data-val="0.5" class=""></span>标准型产品</li>
+                    <li ><span data-val="0.5" class=""></span>尾款型产品</li>
+                    <li ><span data-val="0.7" class=""></span>定保型产品</li>
+                    <li ><span data-val="0.7" class=""></span>附加贷产品</li>
+                </ul>
+                <div class="daikuanqixian" style="margin: 0;"><span>贷&nbsp;款&nbsp;期&nbsp;限</span>
+                    <select name="daikuanqixian" dwz-event-on-change="change" style="margin-top:22px;padding-left:0;">
+                        <option value="12">2年</option>
+                        <option value="24">3年</option>
+                        <option value="24">4年</option>
+                        <option value="24">5年</option>
+                    </select>
+                </div>
+                <div class="zhidaojia" style="margin-top:0;"><span>首&nbsp;&nbsp;&nbsp;付&nbsp;&nbsp;&nbsp;款</span><em id="service_financal_soufukuan" style=" border-radius:5px;">30%</em></div>
+                <!--分割条-->
+                <div class="devider t-line" style="margin-top: 15px;"></div>
+                <div class="jiage t-line">
+                    <div>月需还贷款：<span>¥<em id="service_financal_cankaojia">1400.00</em>千元</span></div>
+                </div>
+                <div class="zhushi">
+                    注：以上数据仅供参考，实际支付金额以最终客户贷款合同为准，详情可咨询当地经销商
+                </div>
+            </div>
+            <!-- 内容 End-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>汽车秀</title>
+	<link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+	<div class="view-container top-tab">
+		<!-- 内容 begin -->
+		<div class="Top-location">
+			<div class="nav-tabbar nav-tabbar-tab nav-orange-tab">
+				<a class="tab-button active" href="service_appoin1.html">预约保养</a>
+				<a class="tab-button" href="service_appoin.html">预约维修</a>
+			</div>
+		</div>
+		<!-- 内容 End -->
+		<div class="scroll-content dwz-scroll">
+			<div class="scroll">
+				<!-- 内容 begin-->
+				<div class="">
+					<form method="post" action="ajaxDone.html" onsubmit="return validateCallback(this, navViewAjaxDone)">
+						<div class="list">
+							<div class="item">
+								<div class="item-content">
+									<label class="name" >您的称呼:</label>
+									<input class="input" type="text" name="comeTime" placeholder="李小二"  >
+									<div class="name-choice">
+										<label class="radio-bar item-radio-bar"><input class="radio-button" type="radio" name="gender" value="1" checked><i class="icon-radio checked"></i>先生</label>
+										<label class="radio-bar"><input class="radio-button" type="radio" name="gender" value="0"><i class="icon-radio"></i>女士</label>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">联系方式:</label>
+									<input class="input" type="number" name="mibile" maxlength="11" pattern="[0-9]{11,11}" placeholder="请输入您的11位手机号码" required="required" data-error="请输入您的11位手机号码">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">所在地区:</label>
+									<select class="select" name="dealer">
+										<option>北京 海淀区 学院路</option>
+										<option>北京</option>
+									</select>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">预约经销商:</label>
+									<input class="input" type="datetime-local" name="comeTime" placeholder="北京第一4s店">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">行驶公里:</label>
+									<input class="input" type="number" pattern="[0-9]*" name="mileage" required placeholder="9000">
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-content">
+									<label class="name">购车时间:</label>
+									<input class="input" type="tel" name="buyTime" required placeholder="2012-09-19">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-button t-line">
+							<button class="form-submit btn-orange" type="submit">提 交</button>
+						</div>
+					</form>
+				</div>
+				<!-- 内容 End-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
