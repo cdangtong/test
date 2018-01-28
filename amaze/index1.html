@@ -36,68 +36,51 @@
 </head>
 <body>
   <!-- 輪播圖 -->
-  <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+
   <!--列表标题-->
-    <div class="am-list-news-hd am-cf">
-       <!--带更多链接-->
-       <!--
-        <a href="###" class="">
-          <h2>左图 + 摘要</h2>
-            <span class="am-list-news-more am-fr">更多 &raquo;</span>
-        </a>
-          </div>
+  <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+  <ul class="am-slides">
+    <li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+    <li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+  </ul>
+</div>
 
-  <div class="am-list-news-bd">
-  <ul class="am-list">
-    -->
+
+<script>
+  $(function() {
+    var $slider = $('#demo-slider-0');
+    var counter = 0;
+    var getSlide = function() {
+      counter++;
+      return '<li><img src="http://s.amazeui.org/media/i/demos/bing-' +
+        (Math.floor(Math.random() * 4) + 1) + '.jpg" />' +
+        '<div class="am-slider-desc">动态插入的 slide ' + counter + '</div></li>';
+    };
+
+    $('.js-demo-slider-btn').on('click', function() {
+      var action = this.getAttribute('data-action');
+      if (action === 'add') {
+        $slider.flexslider('addSlide', getSlide());
+      } else {
+        var count = $slider.flexslider('count');
+        count > 1 && $slider.flexslider('removeSlide', $slider.flexslider('count') - 1);
+      }
+    });
+
+  });
+</script>
+
+
+
+ 
     
     
-     <!--缩略图在标题左边-->
-  <!--    <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11614662/" class="">
-            <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="我很囧，你保重....晒晒旅行中的那些囧！"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="http://www.douban.com/online/11614662/" class="">我很囧，你保重....晒晒旅行中的那些囧！</a></h3>
-
-            <div class="am-list-item-text">囧人囧事囧照，人在囧途，越囧越萌。标记《带你出发，陪我回家》http://book.douban.com/subject/25711202/为“想读”“在读”或“读过”，有机会获得此书本活动进行3个月，每月送出三本书。会有不定期bonus！</div>
-
-        </div>
-      </li>
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="http://www.douban.com/online/11624755/" class="">我最喜欢的一张画</a></h3>
-
-            <div class="am-list-item-text">你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片美我最喜欢的画群296795413进群发画，少说多发图，</div>
-
-        </div>
-      </li>
-      <li class="am-g am-list-item-desced">
-
-        <div class=" am-list-main">
-            <h3 class="am-list-item-hd"><a href="http://www.douban.com/online/11645411/" class="">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a></h3>
-
-            <div class="am-list-item-text">还在苦恼圣诞礼物再也玩儿不出新意？快来抢2013最炫彩的跨国圣诞礼物！【参与方式】1.关注“UniqueWay无二之旅”豆瓣品牌小站http://brand.douban.com/uniqueway/2.上传一张**本人**在旅行中色彩最浓郁、最丰富的照片（色彩包含取景地、周边事物、服装饰品、女生彩妆等等，发挥你们无穷的创意想象力哦！^^）一定要有本人出现喔！3. 在照片下方，附上一句旅行宣言作为照片说明。 成功参与活动！* 听他们刚才说，上传照片的次</div>
-
-        </div>
-      </li>
+    
+    
 
     
-    </ul>
-  </div>
+    
 
-    </div>
-
--->
 
 <!-- 輪播圖 -->
 
@@ -142,7 +125,7 @@
 
 
 <div clsaa="am-g">
-  <div class="am-u-lg-3 am-u-md-4 am-u-sm-5" style="background-color:#eee;heigh:300px">
+  <div class="am-u-lg-3 am-u-md-3 am-u-sm-3" style="background-color:#eee;heigh:300px">
     <nav class="scrollspy-nav" data-am-scrollspynav="{offsetTop: 45;className: active: 'am-active'}" data-am-sticky>
   <ul>
     <li><a href="#about">关于棉花糖</a></li>
@@ -153,14 +136,16 @@
   </ul>
 </nav>
   </div>
-  <div class="am-u-lg-9 am-u-md-8 am-u-sm-7" style="background-color:#eee">
+  <div class="am-u-lg-9 am-u-md-9 am-u-sm-9" style="background-color:#eee">
     <div class="am-panel am-panel-default" id="team" >
     <div class="am-panel-hd">成员介绍</div>
 <div class="am-panel am-panel-default" id="about" name="about">
-  <div class="am-list-news-bd">
+
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+   <div class="am-list-news-bd">
   <ul class="am-list">
-   
-    <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+   <!--缩略图在标题左边-->
+      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
         <div class="am-u-sm-4 am-list-thumb">
           <a href="http://www.douban.com/online/11614662/" class="">
             <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="我很囧，你保重....晒晒旅行中的那些囧！"/>
@@ -170,7 +155,7 @@
         <div class=" am-u-sm-8 am-list-main">
             <h3 class="am-list-item-hd"><a href="http://www.douban.com/online/11614662/" class="">我很囧，你保重....晒晒旅行中的那些囧！</a></h3>
 
-            <div class="am-list-item-text">囧人囧事囧照！</div>
+            <div class="am-list-item-text">囧人囧事囧照，人在囧途，越囧越萌。标记《带你出发，陪我回家》http://book.douban.com/subject/25711202/为“想读”“在读”或“读过”，有机会获得此书本活动进行3个月，每月送出三本书。会有不定期bonus！</div>
 
         </div>
       </li>
@@ -202,71 +187,24 @@
     </ul>
   </div>
 
+    </div>
+
 </div>
 
 
-<div class="am-panel am-panel-default" id="team" >
-  <div class="am-panel-hd">成员介绍</div>
-  <div class="am-panel-bd">
-    <p>主唱：小球主要为棉花糖[katncandix2]的歌词创作人.叫小球原因是因为小球以前喜欢穿宽宽的衣裤,风大时跑起来像球.因为小球比较怕冷，容易感冒 所以平时都会加个围巾.</p>
-    <p>团长：圣哲主要为棉花糖[katncandix2]的制作人以及曲创作人，平时演出时以木吉他为主要乐器,大家可以叫他老板哦~</p>
-  </div>
+
+
+
+
+
+
 </div>
-
-<div class="am-panel am-panel-default" id="ep" name="ep">
-  <div class="am-panel-hd">首张 EP</div>
-  <div class="am-panel-bd">
-    <h3>2375</h3>
-    <p>EP曲目 介绍</p>
-
-    <p>INTRO [家]</p>
-
-    <p>2375导入式引言。每个人都有想到达的地方，想完成的梦想， 那是你未来想去的家，只要没有放弃，我相信有一天。</p>
-
-    <p>[2375]</p>
-
-    <p>轻松玩吉他手小毛热血跨刀， 2008年初的第一道梦想光芒， 舒服温暖直入你的心脏，不管经过了多久的时间，终于会到达。</p>
-
-    <p>[X2]</p>
-
-    <p>友情X2，勇气X2。好朋友必备默契之歌，一起看见所有的漂亮。</p>
-
-    <p>[你的力量]</p>
-
-    <p>棉花糖式情歌，最简单的旋律，最深刻的情歌，给失恋的你。</p>
-
-    <p>OUTRO</p>
-
-    <p>[幸福的花]</p>
-
-    <p>幸福的花开了，走过的路就不苦了。幸福的花开了，我们就不哭了。</p>
-  </div>
-</div>
-
-
-<div class="am-panel am-panel-default" id="second" name="second">
-  <div class="am-panel-hd">再见王子</div>
-  <div class="am-panel-bd">
-        <p>来自街头的声音。飘浮在城市天空的“棉花糖”。 柔软却刚强，义无反顾地行进。 棉花糖[katncandix2] 小球+圣哲 第2张全创作专辑 [再见王子] 再见梦想。再见初恋。再见泪水。再见昨天。 必须向天真的自己说再见，才能勇敢地冒险找到未来。 幻灭之后的蜕变，是重生的那一刻。 “小飞行”好评后 严选《再见王子》《好日子》《怎么说呢?》《回不去的旅人》 全新格局 10篇刻印成长的青春创作 词+曲+创作+制作+演唱 棉花糖 棉花糖的音乐形成自成一格的清透感 。</p>
-  </div>
-</div>
-
-<div class="am-panel am-panel-default" id="third" name="third">
-  <div class="am-panel-hd">第三张</div>
-  <div class="am-panel-bd">
-    <p>
-      一切看似美好的过程之中，有许多不同却深刻的故事，跟随着生命和宇宙的运行发生中。悲伤的、快乐的时常已无以名状。棉花糖将过程中产生的讯息，刻划成专辑里的十一首歌曲。棉花糖此时还能笑着说这张专辑：「我们走进了黑暗的入口，开始寻找希望与光明，当真正找到了透进光线的出口并走出时，我们早已伤痕无数、甚至被种植黑暗，热情是唯一能抵抗的道具。」我说，那是一段不被了解的路程。</p>
-
-    <p>每个人都是不被了解的怪人，你/你的与众不同，其实与众相同。也许将自我置放在一个不被了解的过程中，才能真正面对前所未见的情感释放与获得。再确认一次：你/你的与众不同，其实与众相同。</p>
-  </div>
 </div>
 
 <!--huadong-->
 
-<p>
-  Hello Amaze UI.
-</p>
-  <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+
+<!--  <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
       id="">
       <ul class="am-navbar-nav am-cf am-avg-sm-4">
           <li >
@@ -296,10 +234,24 @@
       </ul>
   </div>
 </div>
+-->
 <!--在这里编写你的代码-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
+<footer style="position:fixed;bottom:0px;left:0px;height:50px;width: 100%;">
+  <div clsaa="am-g">
+  <div class="am-u-lg-2 am-u-md-2 am-u-sm-2" style="background-color:#000;height:50px;opacity: 0.5;">
+    1
+  </div>
+    <div class="am-u-lg-8 am-u-md-8 am-u-sm-8" style="background-color:#000;opacity: 0.5;height:50px;">
+      <font style="color:#fff">￥300</font>
+    </div>
+      <div class="am-u-lg-2 am-u-md-2 am-u-sm-2" style="background-color:#009900;opacity: 0.9;height:50px;">
+        <font style="color:#fff">去结算</font>
+      </div>
+      </div>
+    </footer>
 
 <!--<![endif]-->
 <!--[if lte IE 8 ]>
